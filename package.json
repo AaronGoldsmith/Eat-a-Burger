@@ -1,0 +1,28 @@
+{
+  "name": "eat-a-burger",
+  "version": "1.0.0",
+  "description": "This one page app uses mySQL, Node, Express, and Handlebars. *Start the game* by installing dependencies and then calling  ```bash nodemon server.js ```",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^3.0.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronGoldsmith/Eat-a-Burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronGoldsmith/Eat-a-Burger/issues"
+  },
+  "homepage": "https://github.com/AaronGoldsmith/Eat-a-Burger#readme"
+}

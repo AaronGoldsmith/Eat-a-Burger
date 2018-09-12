@@ -1,11 +1,12 @@
+DROP DATABASE IF EXISTS burgers_db;
 CREATE DATABASE burgers_db;
 USE burgers_db;
 
-CREATE TABLE quotes
+CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
-	author varchar(255) NOT NULL,
-	edevoured BOOLEAN NOT NULL,
+	name varchar(255) NOT NULL,
+	devoured BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
 
