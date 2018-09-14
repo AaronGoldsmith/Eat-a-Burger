@@ -1,45 +1,52 @@
+<div class="container-fluid px-4 mt-4">
+<h1 class='text-center text-light'>Eat a burger!</h1>
+<hr>
 
+<div class="row bg-white border border-info">
+   <div class="col-lg-6" id="left">
 
+   <h2 class="my-4">Eat the burgers!</h2>
 
-<h1>Eat a burger!</h1>
-<div class="row">
+  <ul class="d-inline">
+    {{#each burger}}
+    {{#unless devoured}}
+      <div class="mx-4">
+       <button class="devour badge mt-2 d-inline badge-light"
+                data-id={{ID}}>🍔
+        </button>
+      <li>
+        <h5 class="burger">
+          {{burger_name}}
+        </h5>  
+      </li>
+      </div>
+    {{/unless}}
+    {{/each}}
+  </ul>
+  </div>
+  <div class="col-md-6" id="right">
+  <h2 class="my-4">Burgers that have been devoured!</h2>
 
-<h2>Burgers that need be eaten!</h2>
+  <ul >
+    {{#each burger}}
+    {{#if devoured}}
+        <li><h3 class='burger px-2'>{{burger_name}}</h3></li>
+    {{/if}}
+    {{/each}}
+  </ul>
 
-<ul class="col-md-6">
-  {{#each burger}}
-  {{#unless devoured}}
-    <li ><h3>{{burger_name}}</h3>
-      <button class="devour" data-id="{{id}}">Devour</button>
-    </li>
-  {{/unless}}
-  {{/each}}
-</ul>
-</div>
-<div class="col-md-6">
-<h2>Burgers that have been devoured!</h2>
-
-<ul >
-  {{#each burger}}
-  {{#if devoured}}
-      <li><h3>{{burger_name}}</h3></li>
-  {{/if}}
-  {{/each}}
-</ul>
-</div>
-<h2>Add a burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
   </div>
 </div>
+<div class=" mt-5 text-center">
+  <h3 class="mb-3">Add a burger</h3>
+  <form class="create-form">
 
-  <button type="submit">Add Burger</button>
+    <div class="form-group">
+      <label for="bn">Burger Name:</label><br>
+      <input type="text" id="bn" class="rounded" name="name">
+    </div>
+
+  <button class="btn btn-primary" type="submit">Add Burger</button>
 </form>
-
-{{!-- 
-
-SELECT DATE_FORMAT(date, "Created a burger at <strong>%h:%m</strong> on <strong>%M %e</strong>" ) FROM burgers;
- --}}
+</div>
+</div>
