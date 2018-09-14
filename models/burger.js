@@ -4,7 +4,7 @@ var orm = require("../config/orm.js");
 var burger = {
   all: function (cb)
   {
-    orm.all("burgers", function (res) // plural
+    orm.all("burgers", function (res) 
     {
       cb(res);
     });
@@ -33,5 +33,4 @@ var burger = {
   }
 };
 
-// Export the database functions for the controller (catsController.js).
 module.exports = burger;
