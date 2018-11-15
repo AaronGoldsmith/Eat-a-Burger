@@ -10,7 +10,6 @@ $(function() {
   
   $(".eaten").on("click",function(event){
     event.preventDefault();
-    console.log('clicked available')
     $('#left').css('display','none')
     $('#right').css('display','inline-table')
 
@@ -18,7 +17,6 @@ $(function() {
   })
   $(".available").on("click",function(event){
     event.preventDefault();
-    console.log('clicked eaten')
     $('#right').css('display','none')
     $('#left').css('display','inline-block')
 
@@ -29,6 +27,7 @@ $(function() {
     var oldBurger = {
       burger_name: $(this)
     };
+    console.log('sorry, cannot add burgers back yet')
     // Send the POST request.
     // $.ajax("/api/burgers", {
     //   type: "POST",
@@ -68,7 +67,6 @@ $(function() {
       type: "POST",
       data: newBurger
     }).then(function (){
-        console.log("created new burger");
         location.reload();
         $("#bn").val("").focus();
       }
