@@ -1,6 +1,5 @@
 
 $(function() {
-  $('.create-form')
   $(".devour").on("click",function(event){
     event.preventDefault();
     var eatenBurger = {

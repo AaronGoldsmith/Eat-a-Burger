@@ -1,20 +1,27 @@
-<div class="container-fluid px-4 mt-4">
+<div class="container-fluid px-4 mt-2">
 <h1 class='text-center text-light'>Eat a burger!</h1>
-<hr>
 
-<div class="row bg-white border border-info">
+
+
+<div class="row mt-4 d-flex justify-content-center options">
+    <div class="card mx-4 p-4 bg-dark"><div class="card-body ">
+      <button type="button" class="btn btn-info mr-5">View available burgers</button>
+      <button type="button" class="btn btn-info mx-2">View the eaten burgers</button>
+      <button type="button" class="btn btn-info ml-5">Create a new burger</button>
+    </div></div>
+   
    <div class="col-lg-6" id="left">
 
-   <h2 class="my-4">Eat the burgers!</h2>
-
-  <ul class="d-inline">
+   <h2 class="my-4" id='caption'>Click on a &nbsp;🍔&nbsp;  to consume it</h2>
+   <ul class="d-flex justify-content-center">
     {{#each burger}}
     {{#unless devoured}}
-      <div class="mx-4">
-       <button class="devour badge mt-2 d-inline badge-light"
+      <div class="mx-4 ">
+       
+      <li class="badge-light badge">
+        <button class="devour badge mt-2 d-inline "
                 data-id={{ID}}>🍔
         </button>
-      <li>
         <h5 class="burger">
           {{burger_name}}
         </h5>  
@@ -37,7 +44,7 @@
 
   </div>
 </div>
-<div class=" mt-5 text-center">
+<div class=" mt-5 text-light text-center">
   <h3 class="mb-3">Add a burger</h3>
   <form class="create-form">
 
