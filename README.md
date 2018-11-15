@@ -5,3 +5,5 @@ This one page app uses mySQL, Node, Express, and Handlebars. *Start the game* by
 ```bash
 nodemon server.js
 ```
+
+Users can add new burgers and devour them when they're ready. 
