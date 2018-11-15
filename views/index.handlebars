@@ -1,28 +1,42 @@
+
+<h1 class='text-light mb-5'>Eat a burger!</h1>
+
+<div class="row mx-auto d-flex justify-content-center w-100">
+    <div class=" text-light">
+      <form class="create-form">
+        <div class="form-group">
+          <input type="text" id="bn" class="rounded pb-1 pl-2 mx-3" name="name" placeholder="Name of Burger">
+          <button class="btn btn-primary" type="submit">Add to menu</button>
+        </div>
+      </form>
+    </div>
+</div>
+
+
 <div class="container-fluid px-4 mt-2">
-<h1 class='text-center text-light'>Eat a burger!</h1>
 
-
-
-<div class="row mt-4 d-flex justify-content-center options">
-    <div class="card mx-4 p-4 bg-dark"><div class="card-body ">
-      <button type="button" class="btn btn-info mr-5">View available burgers</button>
-      <button type="button" class="btn btn-info mx-2">View the eaten burgers</button>
+<div class="row d-flex justify-content-center options">
+    <div class="card mx-lg-4 p-lg-4 ds">
+      <div class="card-body ">
+      <button type="button" class="available btn btn-info mr-5">View available burgers</button>
+      <button type="button" class="eaten btn btn-info mx-2">View the eaten burgers</button>
       <button type="button" class="btn btn-info ml-5">Create a new burger</button>
-    </div></div>
+    </div>
+   </div>
    
-   <div class="col-lg-6" id="left">
+   <div class="col-lg-6 my-5" id="left">
 
-   <h2 class="my-4" id='caption'>Click on a &nbsp;🍔&nbsp;  to consume it</h2>
-   <ul class="d-flex justify-content-center">
+   <h2 id='caption'>Click a <span id="tiny">&nbsp;🍔&nbsp;</span>  to consume it</h2>
+   <ul class="d-flex p-4 justify-content-center">
     {{#each burger}}
     {{#unless devoured}}
-      <div class="mx-4 ">
+      <div class="mx-4 burgers">
        
-      <li class="badge-light badge">
+      <li class="badge-white badge">
         <button class="devour badge mt-2 d-inline "
                 data-id={{ID}}>🍔
         </button>
-        <h5 class="burger">
+        <h5 class="burger text-light">
           {{burger_name}}
         </h5>  
       </li>
@@ -31,29 +45,21 @@
     {{/each}}
   </ul>
   </div>
-  <div class="col-md-6" id="right">
-  <h2 class="my-4">Burgers that have been devoured!</h2>
+  <div class="col-lg-11" id="right">
+  <h2 class="pb-3 my-4">Burgers that have been devoured!</h2>
 
-  <ul >
+  <ul class="devoured_wrap" >
     {{#each burger}}
     {{#if devoured}}
-        <li><h3 class='burger px-2'>{{burger_name}}</h3></li>
+        <li class="burgerli">
+          <span class="mt-3">Add back</span><div class="addback btn btn-primary" title="Add this item back to the menu" data-id={{ID}}>&plus;</div>
+          <h3 class='burger'>{{burger_name}}</h3>
+        </li>
     {{/if}}
     {{/each}}
   </ul>
 
   </div>
 </div>
-<div class=" mt-5 text-light text-center">
-  <h3 class="mb-3">Add a burger</h3>
-  <form class="create-form">
 
-    <div class="form-group">
-      <label for="bn">Burger Name:</label><br>
-      <input type="text" id="bn" class="rounded" name="name">
-    </div>
-
-  <button class="btn btn-primary" type="submit">Add Burger</button>
-</form>
-</div>
 </div>
