@@ -36,16 +36,7 @@ $(function() {
       burger_name: $(this)
     };
     console.log('sorry, cannot add burgers back yet')
-    // Send the POST request.
-    // $.ajax("/api/burgers", {
-    //   type: "POST",
-    //   data: newBurger
-    // }).then(function (){
-    //     console.log("created new burger");
-    //     location.reload();
-    //     $("#bn").val("").focus();
-    //   }
-    // );
+
   })
   $(".devour").on("click",function(event){
     event.preventDefault();

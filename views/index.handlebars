@@ -1,23 +1,23 @@
 
-<h1 class='text-light mb-5'>Eat a burger!</h1>
+<h1 id="title" class='text-light float-left ml-2 mb-5'>Eat a burger!</h1>
 
 
-
-
-<div class="container-fluid px-4 mt-2">
-    <div class="row d-flex justify-content-center ">
+<div class="options row d-flex justify-content-center ">
       <button type="button" class="available btn btn-info p-4 mx-5 mb-3">View available burgers</button>
       <button type="button" class="eaten btn btn-info p-4 mx-5 mb-3">View the eaten burgers</button>
       <button type="button" class="newburg btn btn-info p-4 mx-5 mb-3">Create a new burger</button>
-    </div>
+</div>
+
+<div class="container-fluid px-4 mt-2">
+    
 
 
   
   <div id="left">
    <div class="col-lg-4 my-5 mx-auto" >
-    <h2 class="w-20" id='caption'>Click a <span id="tiny">&nbsp;🍔&nbsp;</span>  to consume it</h2>
    </div>
    <div class="col-sm-12">
+
     <ul id="burger_container" class="d-flex justify-content-center">
       {{#each burger}}
       {{#unless devoured}}
@@ -36,6 +36,8 @@
       {{/each}}
     </ul>
   </div>
+      <h5 class="w-20 text-center" id='caption'>Click a <span id="tiny">&nbsp;🍔&nbsp;</span>  to consume it</h5>
+
   </div>
 </div>
   <div class="col-lg-11" id="right">
