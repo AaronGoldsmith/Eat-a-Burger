@@ -7,7 +7,9 @@ function addBurg(str){
   return str;
 }
 $(function() {
-  
+  $("body").on("scroll",function(event){
+    $("#title").css('background','#000')
+  })
   $(".eaten").on("click",function(event){
     event.preventDefault();
     $('#left').css('display','none')

@@ -1,8 +1,7 @@
-html{
-   overflow-x: hidden;
-}
+
 body{
   margin-top: 80px;
+  overflow-x: hidden;
 }
 
 h1,h2{
@@ -10,10 +9,6 @@ h1,h2{
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
-#burger_container{
-  overflow:scroll;
-}
-
 .text-dflt{
   color: #CCC
 }
@@ -116,17 +111,10 @@ h1,h2{
 #caption{
   padding: 20px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
   #burger_container{
-    max-width: 600px;
-  }
-  #burger_container > li {
-    padding-left: 1600px;
-  }
-  #left{
-    display:flex;
-    flex-basis: 100px;
     flex-direction: column;
   }
+
 
 }
