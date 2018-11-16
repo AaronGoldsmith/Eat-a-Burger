@@ -11,15 +11,23 @@ $(function() {
   $(".eaten").on("click",function(event){
     event.preventDefault();
     $('#left').css('display','none')
+    $('#newburger').css('display','none')
     $('#right').css('display','inline-table')
 
     
   })
+  $(".newburg").on("click",function(event){
+    event.preventDefault();
+    $('#right').css('display','none')
+    $('#left').css('display','none')
+    $('#newburger').css('display','inline-flex')
+  })
+
   $(".available").on("click",function(event){
     event.preventDefault();
     $('#right').css('display','none')
-    $('#left').css('display','inline-block')
-
+    $('#newburger').css('display','none')
+    $('#left').css('display','initial')
   })
   $(".addback").on("click",function(event){
     let sib = $(this).attr('data-id')

@@ -1,3 +1,6 @@
+html{
+ min-width: 100%;
+}
 body{
   margin-top: 80px;
 }
@@ -7,6 +10,10 @@ h1,h2{
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+#burger_container{
+  overflow:scroll;
+}
+
 .text-dflt{
   color: #CCC
 }
@@ -47,17 +54,24 @@ h1,h2{
 .bg-orange{
   background: rgba(200,10,10,0.8);
 }
+.bg-transparent{
+  border: none;
+}
 .burger{
   padding: 15px 4px;
 }
 .devour:hover{
   cursor: pointer;
 }
-#left{
-  width: 100%;
+#left, #newburger > div{
+  margin: 0px auto;
 }
+
 #right{
-  display:none;
+  display: none;
+}
+.available,.eaten,.newburg{
+  margin: 0px 10px;
 }
 .burgerli:hover .addback{
   opacity: 1;
@@ -101,4 +115,18 @@ h1,h2{
   padding: 20px;
   background: #333333aa;
   border: 3px solid black;
+}
+@media screen and (max-width: 600px) {
+  #burger_container{
+    max-width: 600px;
+  }
+  #burger_container > li {
+    padding-left: 1600px;
+  }
+  #left{
+    display:flex;
+    flex-basis: 100px;
+    flex-direction: column;
+  }
+
 }
