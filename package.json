@@ -4,8 +4,8 @@
   "description": "This one page app uses mySQL, Node, Express, and Handlebars. *Start the game* by installing dependencies and then calling  ```bash nodemon server.js ```",
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "express-handlebars": "^3.1.0",
     "method-override": "^3.0.0",
     "mysql": "^2.17.1"
